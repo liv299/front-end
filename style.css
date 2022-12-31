@@ -1,0 +1,938 @@
+ /* CSS REMEDY */
+ *, *::after, *::before {
+    box-sizing:border-box;  
+  }
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+:root {
+	--color-dunkin-pink:#F20C90;
+	--color-dunkin-orange:#FF6E0D;
+	--color-dunkin-redorange:#EE4C29;
+    --color-dunkin-brown:#522C01;
+   
+
+    --color-dunkin-white: white;
+    --color-dunkin-black: black;
+
+    --color-love-coffee: #DDBD8E;
+    --color-background-ajax:#b0e3f8;
+    --color-background-app:#79D0F2; 
+    --color-background-grey:#f4f4f4; 
+
+    --color-background-a:#0477BF;
+    --color-button-grey: #e2e2e2;
+    --color-border: #e2e2e2;
+} 
+
+img{
+    color:#fbfbfb;
+}
+
+/*------------------------------- ALGEMEEN ----------------------------------*/
+body{
+    font-family: 'Fredoka One', cursive;
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    display:inline-block;
+    width:100%;
+}
+
+/* oranje button */
+.button{
+    background-color: var(--color-dunkin-orange);
+    color: var(--color-dunkin-white);
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+
+    width: 333px;
+    height: 55px;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    border-radius: 3em;
+}
+
+/* --- HEADER --- */
+/* SECTION 1 BALK */
+header section:first-child{
+    background-color: var(--color-dunkin-orange);
+    color: var(--color-dunkin-white);
+
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    font-size: .75em;
+
+    padding-top: .5em;
+    padding-bottom: .5em;
+    margin: 0;
+
+}
+/* SECTION 2 NAVBAR */
+header{
+    background-color: var(--color-background-grey);
+    border: solid .01em var(--color-background-grey);
+    position: sticky;
+    top:0;
+    z-index: 1000;
+}
+
+header article:first-child ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* logo */
+header article:first-of-type img:first-child{
+    width: 6em;
+    height: auto;
+}
+
+/* vlag */
+header article:first-child p:first-child{
+    background-color: var(--color-button-grey);
+
+    padding-left: .25em;
+    padding-right:.25em;
+    border-radius: .1em;
+}
+
+/* hamburger button */
+header article:first-child button:first-child{
+    background-color: var(--color-button-grey);
+
+    padding-left:1em;
+    padding-right: 1em;
+    padding-top: .25em;
+    border:0;
+    border-radius: 1em;
+}
+
+header article:first-child button:first-child img{
+    width: 1.5em;
+    height: auto;
+}
+
+/* nav */
+header article:nth-child(2){
+    background-color: var(--color-background-grey);
+
+    padding-top: 6em;
+
+    /* in beeld */
+    position: fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+
+    transform: translateX(100%);
+    transition: .3s;
+    z-index: 100;
+}
+
+header article:nth-child(2) a{
+    background-color: var(--color-background-grey);
+    color: var(--color-dunkin-brown);
+    text-decoration: none;
+}
+
+/* nav menu open */
+header article:nth-child(2).openMenu{
+    transform: translateX(0);
+}
+
+
+
+/* ul storefinder etc.. */
+header article:nth-child(2) nav ul{
+    list-style: none;
+    margin:0;
+    padding:0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* li storefinder.. */
+header article:nth-child(2) nav li{
+    color: var(--color-dunkin-brown);
+    font-size: 2em;
+    text-align: center;
+    text-transform: uppercase;
+
+    padding: .5em;
+}
+
+/* sluit button */
+header section article:nth-child(2) nav img:first-child{
+    width: 2em;
+}
+
+header section article:nth-child(2) nav button{
+    appearance: none;
+
+    padding: 1em;
+    border:0;
+
+    position: absolute;
+    top: 1em;
+    right: 1em;
+}
+
+/* iconen */
+header article:nth-child(2) ul:nth-child(2) li img{
+    width: 2.5em;
+    height: auto;
+}
+
+header article:nth-child(2) ul:nth-child(2){
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    gap: .8em;   
+}
+
+/* SECTION 3 ORDER KNOP */
+header section:nth-child(3){
+    background-color: var(--color-background-grey);
+    padding-top: 1em;
+    padding-bottom: 1em;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
+
+/*---------- Footer ----------*/
+/* ---SECTION 1 ORANJE--- */
+footer section:first-child{
+    background-color: var(--color-dunkin-orange);
+    margin-top: 5em;
+    position: relative;
+}
+
+/* logo */
+footer section:first-child>img{
+    width: 10em;
+    height: auto;
+
+    transform: rotate(-10deg);
+
+    /* logo boven in het midden van footer */
+    position: absolute;
+    left: calc(50% - 5em);
+    top: -5em;
+}
+
+/* ul storefinder.. */
+footer section:first-of-type ul:first-of-type{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    text-align: center;
+
+    padding-top: 7em;
+    padding-bottom: 2.2em;
+    padding-left: 1.3em;
+    padding-right: 1.3em;
+}
+
+/* li storefinder.. */
+footer ul:first-of-type li{
+    background-color: var(--color-dunkin-redorange);
+    color: var(--color-dunkin-white);
+    text-transform: uppercase;
+
+    border-radius: 3em;
+    padding-top: 1.6em;
+    padding-bottom: 1.6em;
+    padding-left: 3.3em;
+    padding-right: 3.3em;
+    margin: .5em;
+}
+
+/* iconen footer */
+footer section ul:nth-of-type(2) li img{
+    width: 2em;
+    height: auto;
+}
+
+footer ul:nth-of-type(2){
+    list-style: none;
+
+    padding: 0;
+    padding-bottom: 1.5em;
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+    gap: .8em;
+}
+
+
+
+/* SECTION 2 GRIJS */
+footer section:nth-of-type(2) p{
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    color: var(--color-dunkin-brown);
+
+    padding-left: 1.3em;
+    padding-right: 1.3em;
+    margin-bottom: 8em;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+ 
+
+
+
+/* ------------------------------------------INDEX BODY .home ----------------------------------------- */
+
+/* SECTION 1 LOVE COFFEE */
+.home main section:first-child{
+    background-image:url(../images/coffee/background.svg);
+    background-color: #DDBD8E;
+
+    max-width: 100%;
+    height: 22em;
+
+    border-radius: 1em;
+    margin: 1em;
+
+    overflow: hidden;
+}
+
+.home main section:first-child div{
+    display: flex;
+    justify-content: center;
+}
+
+.home main section:first-child h2{
+    color: var(--color-dunkin-white);
+    font-size: 2.5em;
+    line-height: 1em;
+    text-transform: uppercase;
+    text-align: center;
+
+    padding-top: .75em;
+    padding-bottom: .5em;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.home main section:first-of-type img:first-child{
+    width: 7em;
+    transform: translateX(3em);
+    object-fit: contain;
+}
+
+.home main section:first-of-type img:nth-of-type(2){
+    width: 9em;
+    z-index: 10;
+    object-fit: contain;
+}
+
+.home main section:first-of-type img:nth-of-type(3){
+    width: 7em;
+    transform: translateX(-3em);
+    object-fit: contain;
+}
+
+/* SECTION 2 BESTEL */
+.home main section:nth-child(2){
+    background-color: var(--color-dunkin-pink);
+    color: var(--color-dunkin-white);
+    font-family: 'Quicksand', sans-serif;
+
+    margin:1em;
+    padding: 1em;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    border-radius: 1em;
+}
+
+/* h2 */
+.home main section:nth-child(2) h2{
+    font-family: 'Fredoka One', cursive;
+
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2.5em;
+    margin:0;
+}
+
+/* div */
+.home main section:nth-child(2) div{
+    display: flex;
+    justify-content: center;
+    gap: .5em;
+}
+
+/* a */
+.home main section:nth-child(2) a{
+    background-color: var(--color-dunkin-white);
+    color: var(--color-dunkin-pink);
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: .5em;
+    padding-left: 2.25em;
+    padding-right: 2.25em;
+    border-radius: .5em;
+}
+
+
+
+/* SECTION 3 AJAX */
+.home main section:nth-child(3){
+    background-color: var(--color-background-ajax);
+    color: var(--color-dunkin-white);
+
+    height: 22em;
+
+    margin: 1em;
+    border-radius: 1em;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:1em;
+    overflow: hidden;
+}
+
+.home main section:nth-child(3) h2{
+    font-size: 2.5em;
+    text-transform: uppercase;
+
+    padding-top: .5em;
+    margin: 0;
+}
+
+.home main section:nth-child(3) img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* SECTION 4 ONLINE */
+.home main section:nth-child(4) h2{
+    color: var(--color-dunkin-pink);
+    font-size: 63px;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 17px;
+}
+
+.home main section:nth-child(4) h2::first-line{
+    color: var(--color-dunkin-orange);
+}
+
+.home main section:nth-child(4){
+    margin: 0em;
+    padding: 0em;
+}
+
+.home main section:nth-child(4) img{
+    width: 60px;
+}
+
+.home main section:nth-child(4) ol{
+    margin: 0;
+    padding: 0;
+}
+
+.home main section:nth-child(4) li{
+    background-color: var(--color-background-grey);
+    
+    margin:1em;
+    margin-top: .8em;
+    margin-bottom: 1em;
+    padding:1em;
+    border-radius: 1em;
+
+    display: flex;
+    align-items: center;
+    gap:1em;
+}
+
+.home main section:nth-child(4) h4{
+    color: var(--color-dunkin-pink);
+    text-transform: uppercase;
+    font-size: 21px;
+    margin: 0;
+}
+
+.home main section:nth-child(4) p{
+    color: var(--color-dunkin-brown);
+    font-family: 'Quicksand', sans-serif;
+    font-size: 12px;
+    margin: 0;
+    margin-top:.25em;
+}
+
+/* SECTION 5 APP */
+.home main section:nth-child(5){
+    background-color: var(--color-background-app);
+    color: var(--color-dunkin-white);
+    text-align: center;
+
+    height: 652px;
+
+    margin: 1em;
+    border-radius: 1em;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.home main section:nth-child(5) h2{
+    font-size: 2.5em;
+    text-transform: uppercase;
+
+    padding-top: .5em;
+    margin:0;
+}
+
+.home main section:nth-child(5) p:first-of-type{
+    font-family: 'Quicksand', sans-serif;
+    text-transform: uppercase;
+    margin:0;
+}
+
+.home main section:nth-child(5) p:nth-of-type(2){
+    font-family: 'Quicksand', sans-serif;
+    max-width: 15em;
+}
+
+.home main section:nth-child(5) img{
+    width: 14em;
+}
+
+.home main section:nth-child(5) img:nth-of-type(3){
+    width: 300px;
+}
+
+
+
+/* SECTION 6 VEGAN */
+.home main section:nth-of-type(6){
+    padding: 0.75em;
+    position: relative;
+}
+
+.home main section:nth-of-type(6) div:first-child img:first-child{
+    width: 349.58px;
+    height: 404.78px;
+    object-fit: cover;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    border-radius: 1em;
+}
+
+.home main section:nth-of-type(6) div:first-of-type img:nth-child(2){
+    background-color: var(--color-dunkin-orange);
+
+    width: 105.15px;
+    height: 105.15px;
+
+    padding: 1em;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 22em;
+    right:3em;
+}
+
+.home main section:nth-of-type(6) h2{
+    color: var(--color-dunkin-pink);
+    font-size: 2.25em;
+    margin-top: 1.5em;
+    margin-bottom:0;
+}
+
+.home main section:nth-of-type(6) p{
+    font-family: 'Quicksand', sans-serif;
+    max-width: 18em;
+}
+
+/* tiel vanaf hier */
+.home main section:nth-of-type(6) div:nth-child(2) img:first-child{
+    width: 349.58px;
+    height: 404.78px;
+    object-fit: cover;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3em;
+    border-radius: 1em;
+}
+
+.home main section:nth-of-type(7) img:first-child{
+    border-radius: 1em;
+    width: 349.58px;
+    height: 404.78px;
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.home main section:nth-of-type(6) div:nth-child(2) img:nth-child(2){
+    background-color: var(--color-dunkin-pink);
+
+    width: 105.15px;
+    height: 105.15px;
+
+    padding: 1em;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 70em;
+    right:3em;
+}
+
+
+
+
+/* SECTION 7 NIEUWS */
+.home main section:nth-of-type(7){
+    background-color:var(--color-background-grey);
+    margin-top: 40px;
+    margin-bottom: 4em;
+    padding: 1em;
+    padding-bottom: 2em;
+}
+
+.home main section:nth-of-type(7) div:first-of-type h2{
+    color: var(--color-dunkin-pink);
+    font-size: 49px;
+    margin: 0;
+    margin-top: .5em;
+    margin-bottom: .25em;
+
+}
+
+.home main section:nth-child(7) div:first-of-type h2::first-line{
+    color: var(--color-dunkin-orange);
+}
+
+/* groningen van hier */
+.home main section:nth-child(7) div:nth-child(2){
+    margin: auto;
+    padding: 1em;
+    margin-top:3em;
+    border: .25em solid var(--color-border);
+    border-radius: 1.5em;
+}
+
+.home main section:nth-child(7) div:nth-child(2) img{
+    display: inline;
+    width: 100%;
+    height: auto;
+
+    border-radius: 1em;
+    margin-bottom: 1em;
+}
+
+.home main section:nth-child(7) div:nth-child(2) a{
+    background-color: var(--color-dunkin-pink);
+    color: var(--color-dunkin-white);
+    font-size: .9em;
+    text-transform: uppercase;
+
+    padding-left: .9em;
+    padding-right: .9em;
+    padding-top: .3em;
+    padding-bottom: .3em;
+    border-radius: 1em;
+}
+
+.home main section:nth-child(7) div:nth-child(2) p{
+    color: var(--color-dunkin-brown);
+    font-size: 1.5em;
+    padding-top: .5em;
+    margin: 0;
+}
+
+.home main section:nth-child(7) div:nth-child(3){
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top:20px;
+}
+
+.home main section:nth-child(7) div:nth-child(3) button{
+    background-color: var(--color-dunkin-orange);
+    color: var(--color-dunkin-white);
+    font-size: 40px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+    width: 60px;
+    height: 60px;
+    border: 0;
+    border-radius: 50%;
+}
+
+
+
+
+/* SECTION 8 STOREFINDER */
+.home main section:nth-of-type(8){
+    background-color: var(--color-dunkin-pink);
+    margin: 1em;
+    padding: 1em;
+    padding-bottom: 3em;
+    border-radius: 1em;
+    position: relative;
+}
+.home main section:nth-of-type(8) h2{
+    color: var(--color-dunkin-white);
+    font-size: 49px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+.home main section:nth-of-type(8) img:first-of-type{
+    width: 262px;
+    height: 262px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: .5em solid white;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.home main section:nth-of-type(8) img:last-of-type{
+    background-color: var(--color-dunkin-white);
+    rotate: -15deg;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    position: absolute;
+    top: 200px;
+    right: 50px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+.home main section:nth-of-type(8) h3{
+    color: white;
+    font-size: 21px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.home main section:nth-of-type(8) button{
+    background-color: var(--color-dunkin-white);
+    color: var(--color-dunkin-pink);
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding-left: 28px;
+    padding-right: 28px;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 0;
+    border-radius: 2em;
+}
+
+.home main section:nth-of-type(10){
+    background-color: var(--color-background-grey);
+    padding-top: 1em;
+    padding-bottom: 1em;
+    position: fixed;
+    bottom:0;
+    left: 0;
+    right: 0;
+}
+
+
+
+
+/* ------------------------------------------BLOG BODY .blog ----------------------------------------- */
+/* SECTION DD */
+.blog main section:first-of-type{
+    background-color: var(--color-dunkin-pink);
+    padding-bottom: 4em;
+}
+
+.blog main section:first-of-type h1{
+    color: var(--color-dunkin-white);
+    text-align: center;
+    font-size: 4em;
+
+    margin-top:0;
+    padding-top: .75em;
+    padding-bottom: .15em;
+}
+
+.blog main section:first-of-type li p{
+    padding:0em;
+    margin:0em;
+}
+
+.blog main section:first-of-type ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;    
+
+    min-width: 18em;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.blog main section:first-of-type ul li{
+    list-style: none;
+    text-transform: uppercase;
+
+    display: flex;
+    justify-content: space-between;
+
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    border: solid .2em var(--color-dunkin-white);
+    border-radius: 2em;
+    margin: .25em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+/* li zoeken */
+.blog main section:first-of-type ul li:first-of-type{
+    color: var(--color-dunkin-white) ;
+}
+
+/* li categorie */
+.blog main section:first-of-type ul li:nth-of-type(2), main section:first-of-type ul li:nth-of-type(3){
+    background-color: var(--color-dunkin-white);
+    color: var(--color-dunkin-pink);
+}
+
+
+
+/* ---SECTION BLOG ITEMS--- */
+/* blog items responsive */
+.blog main section:nth-child(2){
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.blog main article{
+    
+    padding: 1em;
+    border: solid .25em var(--color-border);
+    border-radius: 1em;
+    margin: .75em;
+
+    max-width: 20em;
+    max-height: max-content;
+}
+
+.blog main article:hover{
+    border: solid .25em var(--color-dunkin-pink);
+    transition: .5s;
+}
+
+.blog main article img{
+    display:inline-block;
+    width:100%;
+    height:auto;
+
+    border-radius: 1em;
+    margin-bottom: 1em;
+}
+
+.blog main a{
+    color: var(--color-dunkin-white);
+    font-size: .9em;
+    text-transform: uppercase;
+
+    padding-left: .9em;
+    padding-right: .9em;
+    padding-top: .3em;
+    padding-bottom: .3em;
+    border-radius: 1em;
+}
+
+.blog main article:first-of-type a, article:nth-child(2) a{
+    background-color: var(--color-background-a);
+}
+
+.blog main article:nth-child(3) a{
+    background-color: var(--color-dunkin-redorange);
+}
+
+.blog main article:nth-child(4) a{
+    background-color: var(--color-dunkin-orange);
+}
+
+.blog main article:nth-child(5) a{
+    background-color: var(--color-dunkin-pink);
+}
+
+.blog main h2{
+    color: var(--color-dunkin-brown);
+    font-size: 1.5em;
+    padding-top: .5em;
+    margin: 0;
+}
+
+/* ---------------- @MEDIA QUERIES ---------------- */
+
+
+/* BRONNEN 
+carousel tutorial: https://www.youtube.com/watch?v=gor5BvT2z88
+
+box shadow::afterhttps://css-tricks.com/almanac/properties/b/box-shadow/
+
+box shadow:
+code pen oefening 1 positioneren
+regel 365: box-shadow: .25em .25em .25em var(--blokje-shadow-color);
+
+*/
